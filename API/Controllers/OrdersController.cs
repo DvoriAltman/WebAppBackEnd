@@ -11,7 +11,7 @@ namespace API.Controllers
     public class OrdersController : ControllerBase
     {
 
-        public IOrdersBL _ordersBL; //משתנה ליצירת התלות בממשק הבי אל
+        public IOrdersBL _ordersBL;
 
         public OrdersController(IOrdersBL ordersBL) //ctor
         {
@@ -23,7 +23,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<List<Order>> GetAllOrders()
         {
-            var Order = await _ordersBL.GetAllOrders(); //פה ובפרודוקט לא מזהה את הואר לפי טיפוס אורדר
+            var Order = await _ordersBL.GetAllOrders(); 
             return Order;
         }
 
