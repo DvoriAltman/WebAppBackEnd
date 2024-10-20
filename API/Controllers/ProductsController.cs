@@ -10,7 +10,7 @@ namespace API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        public IProductsBL _productsBL; //משתנה ליצירת התלות בממשק הבי אל
+        public IProductsBL _productsBL; 
 
         public ProductsController(IProductsBL productsBL) //ctor
         {
