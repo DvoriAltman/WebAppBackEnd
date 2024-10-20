@@ -8,7 +8,7 @@ using DAL.Entities;
 
 
 var builder = WebApplication.CreateBuilder(args);
-//מודיעה לפרוגרם שהוא הולך להשתמש בכמה תלויות 
+
 builder.Services.AddScoped<IUsersBL, UsersBL>();
 builder.Services.AddScoped<IUsersDAL, UsersDAL>();
 builder.Services.AddScoped<IProductsBL, ProductsBL>();
