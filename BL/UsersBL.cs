@@ -11,8 +11,8 @@ namespace BL
 {
     public class UsersBL : IUsersBL
     {
-        public IUsersDAL _usersDAL; //יצרנו תלות לממשק של הדל כדי לשמור על הכימוס
-        public IMapper _mapper; // תלות בממשק איי מאפר כדי להשתמש בדיטיאו
+        public IUsersDAL _usersDAL; 
+        public IMapper _mapper; 
         public UsersBL(IUsersDAL usersDAL, IMapper mapper) //ctor
         {
             _usersDAL = usersDAL;
@@ -20,7 +20,7 @@ namespace BL
         }
 
         public async Task<List<User>> GetAllUsers()
-        { // הפעלת הפונקציה משכבת הדאל עי המשתמש של התלות
+        { 
             List<User> users = await _usersDAL.GetAllUsers();
             return users;
         }
