@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Entities;
-//זו המחלקה שמתחברת לדאטה בייס אז זה קובץ ממש חשוב
+
 public partial class ShopContext : DbContext
 {
     public ShopContext()
