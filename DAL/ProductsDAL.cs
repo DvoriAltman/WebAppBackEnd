@@ -15,10 +15,10 @@ namespace DAL
         {
             _context = context;
         }
-        //פונקצית שליפת כל היוזרים
+       
         public async Task<List<Product>> GetAllProducts()
         {
-            List<Product> productsList = await _context.Products.ToListAsync(); //צריך להתאים סוג קריאה אסינק עם פונקציית קור אסינק
+            List<Product> productsList = await _context.Products.ToListAsync(); 
             return productsList;
         }
     }
