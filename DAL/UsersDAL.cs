@@ -11,15 +11,15 @@ namespace DAL
     public class UsersDAL : IUsersDAL
     {
 
-        public ShopContext _context;//יצירת תלות במחלקה האחראית על הגישה דטה בייס
+        public ShopContext _context;
         public UsersDAL(ShopContext context)
         {
             _context = context;
         }
-        //פונקצית שליפת כל היוזרים
+   
         public async Task<List<User>> GetAllUsers()
         {
-            List<User> usersList = await _context.Users.ToListAsync(); //צריך להתאים סוג קריאה אסינק עם פונקציית קור אסינק
+            List<User> usersList = await _context.Users.ToListAsync(); 
             return usersList;
         }
     }
