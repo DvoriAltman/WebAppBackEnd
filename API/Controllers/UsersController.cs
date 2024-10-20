@@ -11,13 +11,13 @@ namespace API.Controllers
     public class UsersController : ControllerBase
     {
 
-        public IUsersBL _usersBL; //משתנה ליצירת התלות בממשק הבי אל
+        public IUsersBL _usersBL; 
 
         public UsersController(IUsersBL usersBL) //ctor
         {
             _usersBL = usersBL;
         }
-        // GET: api/<UsersController>//שליפת יוזרים
+        // GET: api/<UsersController>
         [HttpGet]
         public async Task<List<User>> GetAllUsers()
         {
